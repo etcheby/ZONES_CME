@@ -14,7 +14,7 @@ Change permissions to let the admin execute the file
 chmod +x .bash
 Now you need to enable the file to be used as custom script on the CME
 
-autoprov_cfg set management -cs /path/to/.bash
+autoprov-cfg set management -cs /path/to/.bash
 Enable the parameter to launch the script, in this case the bash is looking for 'MONITORING' to be trigger
 
 autoprov-cfg set template -tn -cp ZONE
