@@ -20,4 +20,4 @@ Enable the parameter to launch the script, in this case the bash is looking for 
 autoprov-cfg set template -tn -cp ZONE
 Whit this everytime the Gateway is launched it send a command and this will launch
 
-**NOTE a variable called POLICY_PACKAGE_NAME= need to be adequated to your policy. or can pass it as parameter.
+**NOTE a variable called POLICY_PACKAGE_NAME= need to be adequated to your policy or can be passed as parameter.
