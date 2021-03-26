@@ -20,7 +20,7 @@ Automates Configuration of all Checkpoint autoscaling deployment with assignment
 
 3- Now you need to enable the file to be used as custom script on the CME. 
 
-# autoprov-cfg set management -cs /path/to/.bash
+# autoprov-cfg set management -cs /path/to/zones.sh
 
 4-Enable the parameter to launch the script, in this case the bash is looking for "ZONE" to be trigger
 
