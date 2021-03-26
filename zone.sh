@@ -1,8 +1,8 @@
 #!/bin/bash
 
 : '
-------- Not supported in production -------
-Needs to be run in Autoprovision template with "ZONE" as a custom parameter. 
+------- No supported in production -------
+Needs to be run in Autoprovision template with "ZONE" as a custom parameter and also 
 Rulebase name to install as second Parameter and Name of the GW where we will take the identities
 ------- No supported in production -------
 '
