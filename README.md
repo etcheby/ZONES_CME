@@ -1,13 +1,14 @@
-# CME Custom Script used in Check Point ASG/MIG/VMSS deployment to automatically assign eth0 interface to a Security-Zone "External" 
-# "External" is a custom name but could be any other defined Security Zone of your choice  
+# Credits to Christian Castillo - Cloud Architect from Check Point LATAM - who helped develop this script -
 
+CME Custom Script used in Check Point ASG/MIG/VMSS deployment to automatically assign eth0 interface to a Security-Zone "External" 
+"External" is a custom name but could be any other defined Security Zone of your choice  
 Automates Configuration of all Checkpoint autoscaling deployment with assignment of eth0 to security-zone. 
 
 # ------- Not supported in production -------
-Credits to Christian Castillo - Cloud Architect from Check Point LATAM - who helped develop this script - 
+ 
 
 
-Instructions.
+# Instructions.
 
 1- First copy the bash script into the management server directory of your choice.
 
