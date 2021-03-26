@@ -3,7 +3,9 @@
 
 Automates Configuration of all Checkpoint autoscaling deployment with assignment of eth0 to security-zone. 
 
-# ------- Not supported in production ------- 
+# ------- Not supported in production -------
+Credits to Christian Castillo - Cloud Architect from Check Point LATAM - who helped develop this script - 
+
 
 Instructions.
 
