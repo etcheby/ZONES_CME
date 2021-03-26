@@ -35,11 +35,11 @@ echo "Connection to API server"
 	GW_JSON=$(mgmt_cli --session-id $SID show simple-gateway name $GW_NAME -f json)
 	GW_UID=$(echo $GW_JSON | jq '.uid')
   GW_ETH0_NAME=$(echo $GW_JSON | jq '.interfaces[0] .name')
-  GW_ETH0_ADDRESS=$(echo $GW_JSON | jq '.interfaces[0] .ipv4-address')
-  GW_ETH0_MASK=$(echo $GW_JSON | jq '.interfaces[0] .ipv4-network-mask')
+  GW_ETH0_ADDRESS=$(echo $GW_JSON | jq '."interfaces"[0] ."ipv4-address"')
+  GW_ETH0_MASK=$(echo $GW_JSON | jq '."interfaces"[0] ."ipv4-network-mask"')
   GW_ETH1_NAME=$(echo $GW_JSON | jq '.interfaces[1] .name')
-  GW_ETH1_ADDRESS=$(echo $GW_JSON | jq '.interfaces[1] .ipv4-address')
-  GW_ETH1_MASK=$(echo $GW_JSON | jq '.interfaces[1] .ipv4-network-mask')
+  GW_ETH1_ADDRESS=$(echo $GW_JSON | jq '."interfaces"[1] ."ipv4-address"')
+  GW_ETH1_MASK=$(echo $GW_JSON | jq '."interfaces"[1] ."ipv4-network-mask"')
 	
 echo "adding zones and interfaces"
   mgmt_cli --session-id $SID set simple-gateway uid $GW_UID interfaces.0.name $GW_ETH0_NAME interfaces.0.ipv4-address $GW_ETH0_ADDRESS interfaces.0.ipv4-network-mask $GW_ETH0_MASK interfaces.0.anti-spoofing false interfaces.0.security-zone true interfaces.0.security-zone-settings.specific-zone "ExternalZone" interfaces.0.topology external interfaces.1.name $GW_ETH1_NAME interfaces.1.ipv4-address $GW_ETH1_ADDRESS interfaces.1.ipv4-network-mask $GW_ETH1_MASK interfaces.1.anti-spoofing false interfaces.1.security-zone true interfaces.1.security-zone-settings.specific-zone "InternalZone" interfaces.1.topology internal interfaces.1.topology-settings.ip-address-behind-this-interface "network defined by the interface ip and net mask"
